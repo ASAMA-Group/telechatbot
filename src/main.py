@@ -8,7 +8,7 @@ from loguru import logger
 class Telechat:
     def __init__(self):
         # self.token = os.environ['teletoken']
-        self.bot = telebot.TeleBot(os.environ['teletoken'], parse_mode=None)
+        self.bot = telebot.TeleBot(os.environ['TELETOKEN'], parse_mode=None)
         self.start()
         logger.info("Starting bot")
         

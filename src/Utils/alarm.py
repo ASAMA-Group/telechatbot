@@ -1,21 +1,14 @@
 import functools
 import time
-import datetime
+from datetime import timedelta , datetime
 
 
 
-def time_alarm(func):
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        print("hi guys!!!")
-        
-        timy = datetime.datetime.now().strftime("%H:%M")
-        counter = 2
-        for i in range(counter):
-            if timy == "21:58":
-                print(f"class time: {timy}")
-            time.sleep(10)
-        
-        result = func(*args, **kwargs)
-        return result
-    return wrapper
+def time_alarm():
+
+    timy2 = datetime.now() 
+    delta2 = timedelta(hours=20 , minutes=00)
+    if timy2 == '22:47':
+        return f'start class:{timy2}'
+    else:
+        return f'az class gozashteh: {timy2 - delta2}'
